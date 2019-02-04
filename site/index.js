@@ -1,5 +1,6 @@
 import { lint } from "stylelint"
 import standardConfig from "stylelint-config-standard"
+import recommendedConfig from "stylelint-config-recommended"
 
 const sourceEl = document.querySelector(".Source")
 const configEl = document.querySelector(".Config")
@@ -50,7 +51,14 @@ function run() {
   }
 }
 
-configEl.innerHTML = JSON.stringify(standardConfig, null, 2)
+const config = Object.assign(
+  standardConfig,
+  {
+    extends: undefined,
+    rules: Object.assign(standardConfig.rules, recommendedConfig.rules),
+  }
+)
+configEl.innerHTML = JSON.stringify(config, null, 2)
 
 sourceEl.addEventListener("change", run)
 sourceEl.addEventListener("keyup", run)
