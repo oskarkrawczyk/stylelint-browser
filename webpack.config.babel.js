@@ -9,7 +9,7 @@ export default {
     filename: "bundle.js",
   },
   resolve: {
-    root: path.resolve(__dirname),
+    // root: path.resolve(__dirname),
     alias: {
       "resolve-from": "empty-module",
       cosmiconfig: "cosmiconfig-module",
@@ -21,14 +21,14 @@ export default {
       "global-modules": "empty-module",
       fs: "fs-module"
     },
-    modulesDirectories: [
+    modules: [
       "node_modules",
       "site/mocks",
     ]
   },
   module: {
     exprContextCritical: false,
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         loader: "babel-loader",
@@ -42,15 +42,6 @@ export default {
     ],
   },
   plugins: [
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false,
-        },
-      output: {
-        comments: false,
-      },
-    }),
     new webpack.NormalModuleReplacementPlugin(
       /requireRule\.js/,
       path.resolve(__dirname, "site/mocks/require-rule.js"),
