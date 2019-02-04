@@ -2,7 +2,7 @@
 
 This project is based on https://github.com/m-allanson/stylelint-browser-demo
 
-This project demonstrates [stylelint](https://github.com/stylelint/stylelint)  running in a browser.
+This project demonstrates how we can use stylelint 9.10.1 in browser.
 
 # Getting started
 
