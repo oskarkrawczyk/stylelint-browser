@@ -1,8 +1,8 @@
 # Stylelint browser demo
 
-This project demonstrates [stylelint](https://github.com/stylelint/stylelint)  running in a browser.
+This project is based on https://github.com/m-allanson/stylelint-browser-demo
 
-A live demo can be seen at http://m-allanson.github.io/stylelint-browser-demo/
+This project demonstrates [stylelint](https://github.com/stylelint/stylelint)  running in a browser.
 
 # Getting started
 
