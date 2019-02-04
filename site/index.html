@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <meta charset="utf-8">
+    <title>Stylelint in-browser demo</title>
+    <style>
+      body {
+        padding: 10px;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 100px;
+      }
+
+      .Console {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Container">
+      <div class="Section Section--source">
+        <h1>CSS</h1>
+        <textarea class="Source" spellcheck="false">a {} b {color: #FFF; }</textarea>
+      </div>
+      <div class="Section Section--output">
+        <h1>Results</h1>
+        <pre class="Results"></pre>
+        <div class="Console"></div>
+      </div>
+      <div class="Section Section--config">
+        <h1>Config</h1>
+        <textarea class="Config" spellcheck="false">Loading...</textarea>
+      </div>
+    </div>
+    <script type="text/javascript" src="bundle.js"></script>
+  </body>
+</html>
