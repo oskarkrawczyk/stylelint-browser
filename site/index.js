@@ -1,7 +1,7 @@
 import { lint } from "stylelint"
 import standardConfig from "stylelint-config-standard"
 import recommendedConfig from "stylelint-config-recommended"
-window.Lint = lint
+
 const sourceEl = document.querySelector(".Source")
 const configEl = document.querySelector(".Config")
 const resultsEl = document.querySelector(".Results")

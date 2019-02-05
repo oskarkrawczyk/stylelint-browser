@@ -32,13 +32,9 @@ export default {
       {
         test: /\.js$/,
         loader: "babel-loader",
-        // exclude: /node_modules/, without UglifyJsPlugin
-        exclude: /(lodash|postcss-sass|gonzales|crypto-browserify)/ // we have to compile a lot of es6 for UglifyJsPlugin
-      },
-      {
-        test: /\.json$/,
-        loader: "json-loader",
-      },
+        exclude: /node_modules/, // without UglifyJsPlugin
+        // exclude: /(lodash|postcss-sass|gonzales|crypto-browserify)/ // we have to compile a lot of es6 for UglifyJsPlugin
+      }
     ],
   },
   plugins: [
